@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainpic03"
+    tools:context=".ui.ReportActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="140dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_selectTime"
+                style="@style/MyEditStyle"
+                android:layout_width="240dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:text="选 择 年 月 日 期"></EditText>
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:height="40dp"
+                android:textAlignment="center"
+                android:background="@drawable/bg_btn"
+                android:text="查询"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="100dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:text="姓 名:"></TextView>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="曹致远"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:text="部 门:"></TextView>
+            <TextView
+                android:id="@+id/tv_department"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="数据库部门"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:text="月 份:"></TextView>
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="2022-12"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:text="出 勤:"></TextView>
+            <TextView
+                android:id="@+id/tv_punchday"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="21天"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:text="请 假："></TextView>
+            <TextView
+                android:id="@+id/tv_leaveday"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="2天"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp">
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:text="考勤率："></TextView>
+            <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="0%"></TextView>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

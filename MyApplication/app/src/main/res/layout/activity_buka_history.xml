@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic03"
+    tools:context=".ui.BukaHistory">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:layout_height="120dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_time1"
+                    android:layout_width="150dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_style"
+                    android:textAlignment="center"
+                    android:hint="选择开始时间"/>
+                <EditText
+                    android:id="@+id/et_time2"
+                    android:layout_width="150dp"
+                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_style"
+                    android:textAlignment="center"
+                    android:hint="选择结束时间"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/home_btn_bg"
+                android:text="查询"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <ListView
+                android:layout_margin="10dp"
+                android:id="@+id/list_view22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:textSize="60dp"
+            android:layout_height="match_parent"></TextView>
+
+    </LinearLayout>
+</FrameLayout>

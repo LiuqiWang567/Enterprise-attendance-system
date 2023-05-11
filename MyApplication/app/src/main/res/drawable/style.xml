@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style android:name="MyEditStyle">
+        <item android:name="android:textSize"
+            tools:ignore="ExtraText">18sp</item>
+        <item android:name="android:background">@drawable/edit_text_bg</item>
+        <item android:name="android:paddingLeft">10dp</item>
+        <item android:name="android:layout_height">50dp</item>
+    </style>
+
+</resources>

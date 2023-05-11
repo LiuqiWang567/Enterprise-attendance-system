@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="leavetypes" tools:ignore="ExtraTranslation">
+        <item>
+            事假
+        </item>
+        <item>
+            病假
+        </item>
+        <item>
+            公假
+        </item>
+    </string-array>
+    <string-array name="bukatypes" tools:ignore="ExtraTranslation">
+        <item>
+            签到
+        </item>
+        <item>
+            签退
+        </item>
+    </string-array>
+</resources>
