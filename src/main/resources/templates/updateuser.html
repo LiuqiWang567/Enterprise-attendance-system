@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>管理员界面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+  <style>
+
+    .box2{
+      align-content: center;
+    }
+  </style>
+</head>
+<body>
+<div class="row clearfix">
+  <div class="col-md-12 column">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">企业考勤后台管理系统</a>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/toreport">报表管理</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/touserlist">用户管理</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/todepartment">部门管理</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tosystem">系统设置</a>
+          </li>
+          <li class="nav-item pull-right  justify-content-right">
+            <a class="nav-link" href="/toexit">退出登录</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div style="width:600px;height:100%;margin-left:270px;">
+    <form th:action="@{/updateUserinfo}" method="post">
+      工号：<input class="form-control" type="text" name="username" th:value="${users.username}"/><br/>
+      密 码：<input class="form-control" type="text" name="password" th:value="${users.password}"/><br/>
+      姓名：<input class="form-control" type="text" name="name" th:value="${users.name}"><br/>
+      性别：<input class="form-control" type="text" name="gender" th:value="${users.gender}"><br/>
+<!--      部门：<input class="form-control" type="radio" name="did" th:value=1 autocomplete="off">开发部门-->
+<!--      <input class="form-control" type="radio" name="did" th:value=2 autocomplete="off">测试部门-->
+<!--      <input class="form-control" type="radio" name="did" th:value=3 autocomplete="off">数据库部门<br/>-->
+      手机：<input class="form-control" type="text" name="phone" th:value="${users.phone}"><br/>
+      邮箱：<input class="form-control" type="text" name="email" th:value="${users.email}"><br/>
+      毕业院校：<input class="form-control" type="text" name="school" th:value="${users.school}"><br/>
+      出生日期：<input class="form-control" type="date" name="birthday" th:value="${users.birthday}" placeholder="请选择出生日期"><br/>
+      部门：<input class="form-control" type="date" placeholder="部门"><br/>
+
+      学历：<input class="form-control" type="text" name="education" th:value="${users.education}"><br/>
+      地址：<input class="form-control" type="text" name="address" th:value="${users.address}"><br/>
+      入职日期：<input class="form-control" type="date" name="dateofentry" th:value="${users.dateofentry}" placeholder="请选择入职日期"><br/>
+      <div class="box2">
+      <button class="btn btn-primary btn-lg btn-block">保存</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理员界面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <style>
+
+       .container{
+           padding: 10px;
+       }
+    </style>
+</head>
+<body>
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">企业考勤后台管理系统</a>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/toreport">报表管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/touserlist">用户管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/todepartment">部门管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tosystem">系统设置</a>
+                    </li>
+                    <li class="nav-item pull-right  justify-content-right">
+                        <a class="nav-link" href="/toexit">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-6 column">
+            <div id="depChart" style="width: 600px;height:400px;"></div>
+
+        </div>
+        <div class="col-md-6 column">
+            <div id="punchrateChart" style="width: 600px;height:400px;"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    // 基于准备好的dom，初始化echarts实例
+    var depChart = echarts.init(document.getElementById('depChart'));
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '企业考勤部门统计图'
+        },
+        //提示框组件
+        tooltip: {},
+        //图例组件
+        legend: {
+            data:['部门人数']
+        },
+        xAxis: {
+            data:["数据库部门","测试部门","开发部门","运营部门"]
+        },
+        yAxis: {},
+        series: [{
+            name: '人数',
+            type: 'bar',
+            data: [19,27,19,19]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    depChart.setOption(option);
+
+    // 基于准备好的dom，初始化echarts实例
+    var punchrateChart = echarts.init(document.getElementById('punchrateChart'));
+
+    var pieData = [
+        {
+            name: '数据库部门',
+            value: '50'
+        },
+        {
+            name: '测试部门',
+            value: '10'
+        },
+        {
+            name: '开发部门',
+            value: '30'
+        },
+        {
+            name: '运营部门',
+            value: '10'
+        },
+    ]
+    var option2 = {
+        title: {
+            text: '部门考勤统计图'
+        },
+        // 注意：饼图不是直角坐标系图表，就不用配置x轴和y轴了
+        series: [
+            {
+                type: 'pie',
+                data: pieData
+            }
+        ]
+    }
+    punchrateChart.setOption(option2);
+
+</script>
+
+
+</html>

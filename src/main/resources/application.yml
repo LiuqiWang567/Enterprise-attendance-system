@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/db_myapp?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT%2B8&allowMultiQueries=true
+    username: root
+    password: 123456
+  main:
+    allow-circular-references: true
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html;
+    mode: HTML5
+    cache: false
+  web:
+    resources:
+      static-locations: classpath:static/
+
+mybatis-plus:
+  type-aliases-package: com.example.ea_backstage.bean
+  mapper-locations: classpath:mapper/*.xml
+  map-underscore-to-camel-case: true       # 开启自动驼峰命名规则（camel case）映射
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    id-type: auto
+    call-setters-on-nulls: true #设置返回字段不为空，前端不报错
+
+# MyBatis使用pageHelper分页
+pagehelp:
+  helper-dialect: mysql             # 配置使用哪种数据库语言，不配置的话pageHelper也会自动检测
+  reasonable: true                  # 在启用合理化时，如果pageNum<1，则会查询第一页，如果pageNum>pages 则会查询最后一页
+  support-methods-arguments: true   # 支持通过Mapper接口参数来传递分页参数，默认值为false，分页插件会从查询方法的参数值中，自动根据上面的param
+  params: count=countSql
+
+logging:
+  level:
+    com:
+      example:
+        demo:
+          mapper : debug

@@ -1,0 +1,3 @@
+com\example\ea_backstage\bean\User.class
+com\example\ea_backstage\mapper\UserMapper.class
+com\example\ea_backstage\EaBackStageApplication.class
